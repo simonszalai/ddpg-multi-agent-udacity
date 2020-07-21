@@ -1,0 +1,7 @@
+*.log
+.ipynb_checkpoints
+.vscode
+.DS_Store
+__pycache__
+Reacher.app
+env
