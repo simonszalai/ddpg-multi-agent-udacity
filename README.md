@@ -1,14 +1,14 @@
-# Deep Deterministic Policy Gradients for Continuous Control - Udacity DRLND Project 2
+# Multi-Agent DDPG for Continuous Control - Udacity DRLND Project 3
 
-Deep Deterministic Policy Gradients reinforcement learning algorithm to solve a continuous control environment
+Multi-Agent Deep Deterministic Policy Gradients reinforcement learning algorithm to solve a continuous control environment
 
 ## Project Details
 
-This is the second assignment of Udacity's Deep Reinforcement Learning Nanodegree. In this project, the agent has to control a simulated robotic arm. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of the agent is to maintain its position at the target location for as many time steps as possible.
+This is the third and final assignment of Udacity's Deep Reinforcement Learning Nanodegree. In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. Thus, the goal of each agent is to keep the ball in play.
 
-The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
+The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
 
-The environment has two version, in the first, a single arm is controlled, in the second, 20 arms are training in parallel to speed up experience collection. I choose the first option, where in order to solve the environment, the agent must get an average score of +30 over 100 consecutive episodes.
+The task is episodic, and in order to solve the environment, your agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents).
 
 ![Trained agent navigates in the environment](trained_agent.gif)
 
@@ -18,10 +18,10 @@ The environment has two version, in the first, a single arm is controlled, in th
 
    Download links:
 
-   - [Linux](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
-   - [MacOS](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher.app.zip)
-   - [Windows 32-bit](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip)
-   - [Windows 64-bit](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
+   - [Linux](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip)
+   - [MacOS](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis.app.zip)
+   - [Windows 32-bit](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86.zip)
+   - [Windows 64-bit](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86_64.zip)
 
 1. Create and activate a new virtual Python environment
    ```
@@ -32,4 +32,4 @@ The environment has two version, in the first, a single arm is controlled, in th
    ```
    pip install -r requirements.txt
    ```
-1. To train the agent and see how it performs, run `jupyter notebook` from the root of this repository, then open `Continuous_Control.ipynb`, and run the cells in the notebook.
+1. To train the agent and see how it performs, run `jupyter notebook` from the root of this repository, then open `Multi_Agent.ipynb`, and run the cells in the notebook.
