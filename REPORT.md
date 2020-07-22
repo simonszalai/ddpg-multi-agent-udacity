@@ -21,17 +21,17 @@ When training the agent, the following hyperparameters were used:
 ```
 BUFFER_SIZE = int(1e6)  # replay buffer size
 BATCH_SIZE = 512  # minibatch size
-GAMMA = 0.999  # discount factor
+GAMMA = 0.99  # discount factor
 TAU = 1e-4  # for soft update of target parameters
-LR_ACTOR = 1e-4  # learning rate of the actor
-LR_CRITIC = 3e-4  # learning rate of the critic
+LR_ACTOR = 1e-3  # learning rate of the actor
+LR_CRITIC = 1e-3  # learning rate of the critic
 WEIGHT_DECAY = 0  # L2 weight decay
-UPDATE_EVERY = 4  # timesteps between updates
+UPDATE_EVERY = 1  # timesteps between updates
 EPSILON = 1.0  # epsilon for the noise process added to the actions
 EPSILON_DECAY = 1e-6  # decay rate for epsilon
 ```
 
-With the above hyperparameters, the training finished in 403 episodes. You can see the scores as a function of episodes during the training below:
+With the above hyperparameters, the training finished in 1122 episodes. You can see the scores as a function of episodes during the training below:
 
 ![Scores during the training](training.png)
 
